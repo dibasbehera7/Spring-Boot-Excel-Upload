@@ -20,7 +20,8 @@ public class MasterDataController {
 	public ResponseEntity<?> listDataAll(){
 		List<MasterData> dataList = masterDataRepo.findAll();
 		return ResponseEntity.status(HttpStatus.OK).body(dataList);
-		
 	}
+	
+	
 	
 }
