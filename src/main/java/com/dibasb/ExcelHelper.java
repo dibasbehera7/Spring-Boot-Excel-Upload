@@ -17,7 +17,7 @@ public class ExcelHelper {
 
 	public static String TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 	static String[] HEADERs = { "Id", "Title", "Description", "ActiveYN" };
-	static String SHEET = "Tutorials";
+	static String SHEET = "MasterData";
 
 	public static boolean hasExcelFormat(MultipartFile file) {
 		if (!TYPE.equals(file.getContentType())) {
@@ -76,7 +76,6 @@ public class ExcelHelper {
 			            default:
 			              break;
 			            }
-			        	
 			        	cellIdx++;
 			        }
 			        
