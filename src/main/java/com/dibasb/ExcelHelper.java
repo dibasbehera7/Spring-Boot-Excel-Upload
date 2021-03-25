@@ -2,7 +2,9 @@ package com.dibasb;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -79,6 +81,7 @@ public class ExcelHelper {
 			        	cellIdx++;
 			        }
 			        
+			        masterData.setRequestOn(new Timestamp(new Date().getTime()));
 			        masterDatas.add(masterData);
 			 }
 			

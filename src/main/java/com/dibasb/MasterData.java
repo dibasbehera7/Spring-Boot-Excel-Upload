@@ -1,7 +1,7 @@
 package com.dibasb;
 
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -35,7 +35,15 @@ public class MasterData {
 	@Column(insertable = false, updatable = false)
 	private String contentType;
 	
-	@Temporal(TemporalType.TIMESTAMP)
+	//@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "dd-mm-yyyy hh24:mm:ss")
-	private Date actionOn; 
+	private Timestamp actionOn; 
+	
+	@DateTimeFormat(pattern = "dd-mm-yyyy hh24:mm:ss")
+	private Timestamp requestOn; 
+
+	@DateTimeFormat(pattern = "dd-mm-yyyy hh24:mm:ss")
+	private Timestamp completeOn; 
+	
+	private String timeTaken;
 }
